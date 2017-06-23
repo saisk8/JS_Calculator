@@ -1,6 +1,19 @@
 body {
-    background-image: url("background.jpg");
+    background-image: url("image.jpg");
     background-repeat: no-repeat;
     -webkit-filter: blur(5px);
     filter: opacity(40%);
+    font-family: 'Open Sans', sans-serif;
 }
+
+.calculator {
+    height: 400px;
+    width: 250px;
+    margin-top: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border: 3px solid;
+}
+
+.buttons {}
