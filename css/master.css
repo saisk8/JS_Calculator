@@ -14,6 +14,19 @@ h1 {}
     margin-right: auto;
     margin-bottom: auto;
     border: 3px solid;
+    border-radius: 20px;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+}
+
+.display-primary {
+    width: 85%;
+    height: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #b4b39d;
+    border-radius: 6px;
+    background-color: #c3c2ab;
+    margin: inherit;
 }
 
 #buttons {
@@ -33,7 +46,7 @@ button {
     border: none;
     background-color: #3a3a3a;
     margin: 0 4px 10px 8px;
-    height: 40px;
-    width: 50px;
+    height: 60px;
+    width: 70px;
     box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
 }
