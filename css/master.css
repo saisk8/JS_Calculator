@@ -56,4 +56,6 @@ button {
     background-color: #ffffff;
     height: 80px;
     width: 90px;
+    cursor: pointer;
+    outline: none;
 }
