@@ -1,10 +1,23 @@
 body {
     background-color: #fafafa;
-    background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
 }
 
-h1 {}
+.red {
+    color: #e85600;
+}
+
+.blue {
+    color: #5764c6;
+}
+
+.green {
+    color: #32b643;
+}
+
+.yellow {
+    color: #ffb700;
+}
 
 .calculator {
     height: 520px;
