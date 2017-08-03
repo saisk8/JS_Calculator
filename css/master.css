@@ -20,7 +20,7 @@ body {
 }
 
 .calculator {
-    height: 520px;
+    height: 510px;
     width: 380px;
     margin-top: 5%;
     margin-left: auto;
@@ -33,16 +33,26 @@ body {
 
 .display-primary {
     width: 100%;
-    height: 90px;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
     margin: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-right: 25px;
 }
 
 .display-secondary {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     width: 100%;
     height: 30px;
-    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+    opacity: 0.5;
 }
 
 #buttons {
