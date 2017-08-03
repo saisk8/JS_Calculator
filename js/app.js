@@ -21,7 +21,28 @@ $(document)
                     }
 
                     if (inChar === 'ce') {
-
+                        var i = -1;
+                        switch (last) {
+                            case '*':
+                                i = log.indexOf('x');
+                                if (index != -1)
+                                    log = log.substring(index);
+                                exp.slice(0, -1);
+                                break;
+                            case '/':
+                                i = log.indexOf('&divide;');
+                                if (index != -1)
+                                    log = log.substring(index);
+                                exp.slice(0, -1);
+                                break;
+                            case '=':
+                                log = '';
+                                exp = '';
+                                break;
+                            default:
+                                log.slice(0, -1);
+                                exp.slice(0, -1);
+                        }
                         ans = '';
                     }
 
