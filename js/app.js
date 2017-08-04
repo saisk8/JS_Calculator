@@ -5,6 +5,14 @@ $(document)
         var log = '';
         var exp = '';
         var last = '';
+        var myNamespace = {};
+
+        myNamespace.round = function(number, precision) {
+            var factor = Math.pow(10, precision);
+            var tempNumber = number * factor;
+            var roundedTempNumber = Math.round(tempNumber);
+            return roundedTempNumber / factor;
+        };
 
         // Function to take the input on the click of a button
         $("button")
@@ -68,11 +76,13 @@ $(document)
                     }
 
                     if (inChar === '=') {
+                        var j;
                         last = inChar;
                         ans = eval(exp);
+                        ans = myNamespace.round(ans, 3);
                     }
 
-                    if (inChar === '+' || inChar === '-' || inChar === '%') {
+                    if (inChar === '+' || inChar === '-' || inChar === '%' || inChar === '.') {
                         last = inChar;
                         log += inChar;
                         exp += inChar;
