@@ -20,6 +20,11 @@ $(document)
                 inChar = $(this)
                     .attr("value");
                 //console.log(inChar);
+                if (log === '' && isNaN(inChar)) {
+                    log = '';
+                    last = '';
+                    return;
+                }
                 if (isNaN(inChar)) {
                     if (last === '=') {
                         log = ans;
