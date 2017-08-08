@@ -25,10 +25,23 @@ $(document)
                     last = '';
                     return;
                 }
+
                 if (isNaN(inChar)) {
                     if (inChar === '.' && isNaN(last)) {
                         log += "0";
                         exp += "0";
+                    }
+
+                    if (inChar === '^') {
+                        if (last === '-') {
+                            log = log.substring(0, log.length - 1);
+                            exp = exp.substring(0, exp.length - 1);
+                            last = last.substring(0, last.length - 1);
+                        } else {
+                            log += '-';
+                            exp += '-';
+                            last = '-';
+                        }
                     }
 
                     if (last === '=') {
