@@ -116,8 +116,14 @@ $(document)
                     exp += inChar;
                     console.log(log);
                 }
-                $("#log")
-                    .html(log);
+                if (log.length > 14) {
+                    $("#log")
+                        .html(log.substring(log.length - 14));
+                    console.log(log.length - 14);
+                } else {
+                    $("#log")
+                        .html(log);
+                }
                 $("#answer")
                     .html(ans);
             });
