@@ -5,6 +5,8 @@ $(document)
         var log = '';
         var exp = '';
         var last = '';
+        var decimal = false;
+        var invalid = false;
         var myNamespace = {};
 
         myNamespace.round = function(number, precision) {
@@ -13,6 +15,20 @@ $(document)
             var roundedTempNumber = Math.round(tempNumber);
             return roundedTempNumber / factor;
         };
+
+        //Function to validate the expression
+        function validate(exp) {
+            console.log("exp = " + exp + " d = " + decimal + " i = " + invalid);
+            if (decimal) {
+                //decimal = false;
+                return false;
+            }
+            if (invalid) {
+                //invalid = false;
+                return false;
+            }
+            return true;
+        }
 
         // Function to take the input on the click of a button
         $("button")
@@ -27,7 +43,7 @@ $(document)
                 }
 
                 if (isNaN(inChar)) {
-                    if (inChar === '.' && isNaN(last)) {
+                    if (inChar === '.' && (isNaN(last) || last === '')) {
                         log += "0";
                         exp += "0";
                     }
@@ -101,14 +117,24 @@ $(document)
                     if (inChar === '=') {
                         var j;
                         last = inChar;
-                        ans = eval(exp);
-                        ans = myNamespace.round(ans, 3);
+                        if (validate(exp)) {
+                            console.log("v1 = " + validate(exp));
+                            ans = eval(exp);
+                            ans = myNamespace.round(ans, 3);
+                        } else {
+                            console.log("v2 = " + validate(exp));
+                            ans = "Error!";
+                        }
+                        console.log(ans);
                     }
 
                     if (inChar === '+' || inChar === '-' || inChar === '%' || inChar === '.') {
                         last = inChar;
                         log += inChar;
                         exp += inChar;
+                        if (inChar === '.' && exp.indexOf('.') > -1) {
+                            decimal = true;
+                        }
                     }
                 } else {
                     last = inChar;
@@ -116,6 +142,7 @@ $(document)
                     exp += inChar;
                     console.log(log);
                 }
+
                 if (log.length > 14) {
                     $("#log")
                         .html(log.substring(log.length - 14));
