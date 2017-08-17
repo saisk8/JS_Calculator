@@ -95,5 +95,6 @@ button {
     height: 80px;
     width: 91px;
     cursor: pointer;
-    border-radius: 10px
+    border-radius: 10px;
+    outline: none;
 }
