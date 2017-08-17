@@ -23,16 +23,40 @@ h1 {
     color: #ffb700;
 }
 
+.hover-red:hover {
+    color: #ffffff;
+    background-color: #e85600;
+}
+
+.hover-blue:hover {
+    color: #ffffff;
+    background-color: #5764c6;
+}
+
+.hover-green:hover {
+    color: #ffffff;
+    background-color: #32b643;
+}
+
+.hover-yellow:hover {
+    color: #ffffff;
+    background-color: #ffb700;
+}
+
+.hover-normal:hover {
+    color: #ffffff;
+    background-color: #454d5d;
+}
+
 .calculator {
     height: 510px;
     width: 380px;
-    margin-top: 4%;
+    margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68);
 }
 
 .display-primary {
@@ -69,7 +93,7 @@ button {
     border: none;
     background-color: #ffffff;
     height: 80px;
-    width: 90px;
+    width: 91px;
     cursor: pointer;
-    outline: none;
+    border-radius: 10px
 }
