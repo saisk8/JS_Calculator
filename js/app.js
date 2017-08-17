@@ -6,7 +6,6 @@ $(document)
         var exp = '';
         var last = '';
         var decimal = false;
-        var invalid = false;
         var myNamespace = {};
 
         myNamespace.round = function(number, precision) {
@@ -18,13 +17,9 @@ $(document)
 
         //Function to validate the expression
         function validate(exp) {
-            console.log("exp = " + exp + " d = " + decimal + " i = " + invalid);
+            console.log("exp = " + exp + " d = " + decimal);
             if (decimal) {
                 //decimal = false;
-                return false;
-            }
-            if (invalid) {
-                //invalid = false;
                 return false;
             }
             return true;
