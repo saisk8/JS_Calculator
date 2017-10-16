@@ -19,7 +19,6 @@ $(document)
         function validate(exp) {
             console.log("exp = " + exp + " d = " + decimal);
             if (decimal) {
-                //decimal = false;
                 return false;
             }
             return true;
@@ -56,8 +55,10 @@ $(document)
                     }
 
                     if (last === '=') {
-                        log = ans;
-                        ans = '';
+                        if (typeof exp.substring(exp.length - 1) === "number") {
+                            log = ans;
+                            ans = '';
+                        }
                     }
 
                     if (inChar === "ac") {
